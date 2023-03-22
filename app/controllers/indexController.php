@@ -9,7 +9,7 @@
         }
         
         public function sobre_nos(){
-            echo('Controlador em ação: IndexController');
+            echo('Controlador em ação: SobreController');
             echo('<br>');
             echo('Página carregada: Sobre Nós');
         }

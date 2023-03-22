@@ -6,6 +6,6 @@
 
     echo('<pre>');
     print_r($route->getUrl());
-
+    echo('<br>');
     print_r($route->getRoutes());
 ?>
