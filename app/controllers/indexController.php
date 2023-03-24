@@ -1,17 +1,31 @@
 <?php
     namespace App\controllers;
 
-    class indexController{
-        public function index(){
-            echo('Controlador em ação: IndexController');
-            echo('<br>');
-            echo('Página carregada: Index');
+    class IndexController{
+
+        // no contexto de MVC os métodos são chamados de action
+        public function index() {
+            // supondo que dados estejam vindo do banco
+            $dados = array("Bombom", "Boneco chocolate neymar", "Barra chocolate");
+            $this->render("index", $dados);
         }
-        
-        public function sobre_nos(){
-            echo('Controlador em ação: SobreController');
-            echo('<br>');
-            echo('Página carregada: Sobre Nós');
+    
+        public function sobre_nos() {
+            $dados = array("Mouse", "Teclado", "Pendrive", "Caixa de Som");
+            $this->render("sobre_nos", $dados);
+        }
+
+        // responsável por renderizar (exibir) a página na tela
+        public function render($view, $dados){
+            // essa função retorna o nome da classe passada como argumento
+            $class = get_class($this);
+
+            $class = str_replace("App\\controllers\\", "", $class);
+            $class = strtolower(str_replace("Controller", "", $class));
+
+            echo($class);
+
+            require_once("../app/views/index/".$view.".phtml");
         }
     }
 ?>
