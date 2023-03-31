@@ -13,7 +13,7 @@
         public function sobre_nos() {
             // supondo que dados estejam vindo do banco
             $this->view->dados = array("Mouse", "Teclado", "Pendrive", "Caixa de Som");
-            $this->render("sobre_nos");
+            $this->render("sobre_nos", "layout2");
         }
     }
 ?>

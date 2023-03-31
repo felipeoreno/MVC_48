@@ -3,7 +3,7 @@
         'name' => 'felipeoreno/mvc_48',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '44c58c8e8219d4786a9fcfa257265f49bec12255',
+        'reference' => '3fcee15f0383fb35320594aace58f5f964413b25',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'felipeoreno/mvc_48' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '44c58c8e8219d4786a9fcfa257265f49bec12255',
+            'reference' => '3fcee15f0383fb35320594aace58f5f964413b25',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
