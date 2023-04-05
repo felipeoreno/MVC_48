@@ -11,6 +11,7 @@
         // o nome da classe seguido de dois ponto
         // ex: Connection::getDb()
         public static function getDb(){
+            
             #informações sobre o banco de dados
             $host       =   "localhost";
             $db_name    =   "mvc_48";
@@ -24,7 +25,7 @@
             $sis_name   =   "MVC M48";
             $sis_email  =   "felipereno2005@gmail.com";
 
-            try {
+            // try {
                 $conn = new PDO(
                     $db_driver.
                     ':host='.$host.
@@ -35,9 +36,9 @@
                 );
 
                 return $conn;
-            } catch(PDOException $error){
-                die("Erro de Conexão: ".$error->getMessage());
-            }
+            // } catch(PDOException $error){
+            //     die("Erro de Conexão: ".$error->getMessage());
+            // }
         }
     }
 ?>

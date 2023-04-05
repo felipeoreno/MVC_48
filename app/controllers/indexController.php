@@ -6,7 +6,7 @@
         // no contexto de MVC os métodos são chamados de action
         public function index() {
             // supondo que dados estejam vindo do banco
-            $this->view->dados = array("Bombom", "Boneco chocolate neymar", "Barra chocolate");
+            $this->view->dados = array("Bombom", "Boneco chocolate neymar", "Barra chocolate", "INICIANDO A CONSTRUÇÃO DO LAYOUT DINÂMICO");
             $this->render("index");
         }
     
