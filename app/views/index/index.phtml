@@ -1,17 +1,17 @@
-<h1>Página Inicial</h1>
-<a href='/'>Página inicial</a>
-<br>
-<a href='/sobre_nos'>Sobre nós</a>
-<hr>
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Página Inicial</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <a href='/'>Página inicial</a>
+    <br>
+    <a href='/sobre_nos'>Sobre nós</a>
     
-<p>Controlador em ação: IndexController</p>
-<br>
-<p>Pagina carregada: Index</p>
+    <hr>
 
-<hr>
-
-<?php
-    foreach ($this->view->dados as $valor) {
-        echo($valor."<br>");
-    }
-?>
+    <?php
+        foreach ($this->view->dados as $valor) {
+            echo($valor."<br>");
+        }
+    ?>
+</div>
