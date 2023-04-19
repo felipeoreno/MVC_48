@@ -25,20 +25,21 @@
             $sis_name   =   "MVC M48";
             $sis_email  =   "felipereno2005@gmail.com";
 
-            // try {
+            try {
                 $conn = new PDO(
                     $db_driver.
                     ':host='.$host.
                     ';dbname='.$db_name.
-                    ';charset='.$charset.
+                    ';port='.$port.
+                    ';charset='.$charset,
                     $user,
                     $pass
                 );
 
                 return $conn;
-            // } catch(PDOException $error){
-            //     die("Erro de Conexão: ".$error->getMessage());
-            // }
+            } catch(PDOException $error){
+                die("Erro de Conexão: ".$error->getMessage());
+            }
         }
     }
 ?>
