@@ -1,26 +1,27 @@
-/*!
-    * Start Bootstrap - SB Admin v7.0.7 (https://startbootstrap.com/template/sb-admin)
-    * Copyright 2013-2023 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
-    */
-    // 
-// Scripts
-// 
+$(document).ready(function () {
+    $('.confirma-delete').click(function (e) {
+        e.preventDefault();
 
-window.addEventListener('DOMContentLoaded', event => {
+        var id = $(this).val();
+        // alert(id)
 
-    // Toggle the side navigation
-    const sidebarToggle = document.body.querySelector('#sidebarToggle');
-    if (sidebarToggle) {
-        // Uncomment Below to persist sidebar toggle between refreshes
-        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-        //     document.body.classList.toggle('sb-sidenav-toggled');
-        // }
-        sidebarToggle.addEventListener('click', event => {
-            event.preventDefault();
-            document.body.classList.toggle('sb-sidenav-toggled');
-            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
-        });
-    }
 
+        swal({
+            title: "Deseja continuar?",
+            text: "Uma vez excluído, você não poderá recuperar este usuário!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    window.location.href = "/usuario_excluir?id="+id;
+                } 
+                // else {
+                //     swal("Your imaginary file is safe!");
+                // }
+            });
+    });
 });
+
+
